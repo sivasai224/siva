@@ -1,0 +1,440 @@
+@charset "utf-8";
+/* -------------------------------------------------------------------------------
+
+    0.  Reset & Clearfix
+    1.  General
+    2.  Menu
+    3.  Pages and Subpages
+    4.  Separators
+    5.  Home Page
+    6.  About Us
+    7.  Our Services
+    8.  Portfolio
+    9.  Portfolio Images Hover Effects
+    10. Portfolio Project page
+    11. Portfolio Testimonials
+    12. News
+	13. News Images Hover Effects
+	14. News Post Page
+	15. Twitter
+    16. Contact
+	17. Footer
+    18. Media Queries
+	
+*/
+
+
+/* ------------------------------------------------------------------------------- */
+/*  0. Reset & Clearfix
+/* ------------------------------------------------------------------------------- */
+
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,blockquote,a,img,small,sub,b,dl,dd,dt,ul,li,label,article,details,footer,header,menu,nav,input,textarea,select{
+	background:transparent;
+	border:0;
+	outline:0;
+	padding:0;
+	margin:0;
+
+	}
+	
+.clearfix:after {
+	clear: both;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	}
+	
+li {
+		list-style:none;
+	}
+
+/* ------------------------------------------------------------------------------- */
+/*  1. General
+/* ------------------------------------------------------------------------------- */	
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('font/Roboto-Light.eot');
+	src: url('font/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+	url('font/Roboto-Light.woff2') format('woff2'),
+	url('font/Roboto-Light.woff') format('woff'),
+	url('font/Roboto-Light.ttf') format('truetype'),
+	url('font/Roboto-Light.svg#Roboto-Light') format('svg');
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: 'Impact';
+	src: url('font/impact.eot');
+	src: url('font/impact.eot?#iefix') format('embedded-opentype'),
+	url('font/impact.woff2') format('woff2'),
+	url('font/impact.woff') format('woff'),
+	url('font/impact.ttf') format('truetype'),
+	url('font/impact.svg#impact') format('svg');
+	font-style: normal;
+	}
+
+@font-face {
+	font-family: 'Roboto-bold';
+	src: url('font/SFUIText-Bold.eot');
+	src: url('font/SFUIText-Bold.eot?#iefix') format('embedded-opentype'),
+	url('font/SFUIText-Bold.woff2') format('woff2'),
+	url('font/SFUIText-Bold.woff') format('woff'),
+	url('font/SFUIText-Bold.ttf') format('truetype'),
+	url('font/SFUIText-Bold.svg#SFUIText-Bold') format('svg');
+	font-style: normal;
+	}
+
+html, body {
+
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+	height: 0px;
+    background-color: #fff;
+	padding-top: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #eee;
+	-webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.31);
+	-moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.31);
+	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.31);
+}
+
+.opacity_div{
+	background-color: rgba(0,0,0,0.2)!important;
+}
+	
+body {overflow-x:hidden;direction:ltr;}
+
+.container {
+	width:100%;
+	padding:0px;
+	margin:0px;
+	overflow-x:hidden;
+	}
+
+.navigation_warp{
+	height: 60px;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	top: 0px;
+	background-color: rgba(0,0,0,0.1);
+}
+
+.logo{
+	float: left;
+	margin-top: 5px;
+	margin-left: 5%;
+}
+
+.logo img{
+	height: 45px;
+	width: auto;
+}
+
+.top_menu{
+	float: right;
+	margin-right: 3%;
+}
+
+.top_menu ul {
+    font-size: 0;
+    position: relative;
+    padding: 0;
+    width: 100%;
+    margin: 0px auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.top_menu li {
+    display: inline-block;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 55px;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+	margin-right: 30px;
+	text-transform: uppercase;
+	font-family: 'Impact';
+	font-weight: normal;
+	letter-spacing: 2px;
+	text-shadow: 0px 1px 0px rgba(150, 150, 150, 1);
+}
+
+.top_menu li:hover {
+background: linear-gradient(45deg, rgba(236,182,145,1) 0%, rgba(249,232,209,1) 100%, rgba(0,212,255,1) 100%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	text-shadow: none;
+	-webkit-text-stroke:none;
+}
+
+.top_menu li.select {
+	 color: #fff;
+border-bottom: 1px solid #fff;
+}
+
+.top_menu li.select:hover {
+color: #fff;
+border-bottom: 1px solid #fff;
+}
+
+.banner_with_content{
+	width:100%;
+	height: auto;
+	padding:0px;
+	margin:0px;
+	overflow-x:hidden;
+	position: relative;
+}
+
+.banner_image{
+	width:100%;
+	height: auto;
+	padding:0px;
+	margin:0px;
+	overflow-x:hidden;
+		overflow-y: hidden;
+}
+
+.banner_image img{
+	width: 100%;
+	height: auto;
+	margin-bottom: -5px;
+	overflow-y: hidden;
+}
+
+.banner_with_content h1{
+	font-size: 6vw;
+	color:#fff ;
+	position: absolute;
+	text-transform: uppercase;
+	font-family: 'Impact';
+	margin-left: 5%;
+	margin-top: 5%;
+	font-weight: normal;
+}
+
+.banner_with_content h4{
+	font-size: 1.8vw;
+	color:#e5e6e8 ;
+	position: absolute;
+	width: 40vw;
+	font-family: 'Roboto-Regular';
+	margin-left: 5%;
+	font-weight: normal;
+	line-height: 1.4em;
+	margin-top: 15%;
+}
+
+.banner_with_content .expolore_btn a{
+   font-size: 3vw;
+    border: 2px solid #fff;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+	color:#fff;
+	position: absolute;
+	font-family: 'Roboto-bold';
+	margin-left: 5%;
+	text-decoration: none;
+	font-weight: bolder;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.9);
+	text-shadow: 0px 1px 0px rgba(150, 150, 150, 1);
+	margin-top: 30%;
+}
+
+.footer_wrap{
+	width:100%;
+	height: 100px;
+	padding:0px;
+	margin:0px;
+	overflow-x:hidden;
+	background-image:url(../image/footer_bg.jpg);
+	background-position: center;
+	background-repeat: repeat-x;
+}
+
+.footer_wrap .help_menu{
+	width: 50%;
+	float: left;
+}
+
+.footer_wrap .onmo_logo_space{
+	float: right;
+	margin-right: 5%;
+}
+
+.footer_wrap .onmo_logo_space img{
+	width: 100px;
+	height: auto;
+	margin-top: 27px;
+}
+
+.help_menu a{
+	color:#fff;
+	font-family: 'Roboto-Regular';
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.help_menu table{
+	margin-top: 20px;
+	margin-left: 8%;
+}
+
+.help_menu table td{
+	padding: 4px 5px 4px 0px;
+}
+
+
+
+@media  screen and (max-width: 480px) {
+	
+	.banner_with_content .expolore_btn a{
+   font-size: 3vw;
+    border: 2px solid #fff;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+	color:#fff;
+	position: absolute;
+	font-family: 'Roboto-bold';
+	margin-left: 5%;
+	text-decoration: none;
+	font-weight: bolder;
+	box-shadow: inset 0px 0px 3px rgba(0,0,0,0.9);
+	text-shadow: 0px 0px 0px rgba(150, 150, 150, 1);
+	margin-top: 36%;
+}
+	
+	.banner_with_content h4{
+	font-size: 2.4vw;
+	color:#e5e6e8 ;
+	position: absolute;
+	width: 40vw;
+	font-family: 'Roboto-Regular';
+	margin-left: 5%;
+	font-weight: normal;
+	line-height: 1.4em;
+	margin-top: 15%;
+}
+	
+	.navigation_warp{
+	height: 50px;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	top: 0px;
+	background-color: rgba(0,0,0,0.1);
+}
+	
+.logo{
+	float: left;
+	margin-top: -2px;
+	margin-left: 5%;
+}
+
+.logo img{
+	width: 110px;
+	height: auto;
+}
+	.top_menu li {
+    display: inline-block;
+    height: 50px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+	margin-right: 15px;
+	text-transform: uppercase;
+	font-family: 'Impact';
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-shadow: 0px 0px 0px rgba(150, 150, 150, 1);
+}
+	
+.footer_wrap{
+	width:100%;
+	height: 50px;
+	padding:0px;
+	margin:0px;
+	overflow-x:hidden;
+	background-image:url(../image/footer_bg.jpg);
+	background-position: center;
+	background-repeat: repeat-x;
+}
+
+.footer_wrap .help_menu{
+	width: 50%;
+	float: left;
+}
+
+.footer_wrap .onmo_logo_space{
+	float: right;
+	margin-right: 5%;
+}
+
+.footer_wrap .onmo_logo_space img{
+	width: 60px;
+	height: auto;
+	margin-top: 10px;
+}
+
+.help_menu a{
+	color:#fff;
+	font-family: 'Roboto-Regular';
+	text-decoration: none;
+	font-size: 10px;
+}
+
+.help_menu table{
+	margin-top: 0px;
+	margin-left: 10%;
+}
+.help_menu table td{
+	padding: 0px 5px 0px 0px;
+	vertical-align:middle;
+}
+	
+.help_menu table td a{
+	padding: -1px 5px 0px 0px;
+	vertical-align:middle;
+}
+	
+	.logo{
+	float: left;
+	margin-top: 10px;
+	margin-left: 5%;
+}
+	
+	.margin_top_10{
+		margin-top: 29%;
+		display: block;
+		position: absolute;
+		margin-left: 5%;
+	}
+	
+	.help_menu img{
+width: 15px!important;
+		height: auto;
+		margin-top: 5px;
+}
+}
+@media only screen and (min-device-width : 1919px) and (max-device-width : 2500px) and (orientation : landscape) {
+}
+
+@media only screen and (min-device-width : 2501px) and (max-device-width : 4000px) and (orientation : landscape) {
+}
+

@@ -1,0 +1,29 @@
+.jssor-loading-tail-spin img {
+animation-name: jssor-loading-tail-spin;
+animation-duration: 1.2s;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+}
+
+@keyframes jssor-loading-tail-spin {
+from {
+transform: rotate(0deg);
+}
+
+to {
+transform: rotate(360deg);
+}
+}
+
+.jssorArrow1 {display:block;position:absolute;cursor:pointer;}
+.jssorArrow1 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+.jssorArrow1:hover {opacity:.8;}
+.jssorArrow1.jssora051dn {opacity:.5;}
+.jssorArrow1.jssora051ds {opacity:.3;pointer-events:none;}
+
+.jssorBulletNavigator1 {position:absolute;}
+.jssorBulletNavigator1 .i {position:absolute;cursor:pointer;}
+.jssorBulletNavigator1 .i .b {fill:#999;stroke:#999c;stroke-width:1200;stroke-miterlimit:10;stroke-opacity:0.5;  transform: scale(1);}
+.jssorBulletNavigator1 .i:hover .b {fill-opacity:.7;}
+.jssorBulletNavigator1 .iav .b {fill:#fff;stroke:#fff;stroke-opacity:.7;stroke-width:1200;transform: scale(1);}
+.jssorBulletNavigator1 .i.idn {opacity:.3;}
